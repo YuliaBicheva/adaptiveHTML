@@ -11,9 +11,9 @@ $(function() {
 
 	var api = $('#my-menu').data( "mmenu" );
 
-	api.bind('open:start', function() {
+	api.bind('open:finish', function() {
 		$('.hamburger').addClass('is-active')
-	}).bind('close:start', function() {
+	}).bind('close:finish', function() {
 		$('.hamburger').removeClass('is-active')
 	});
 });
