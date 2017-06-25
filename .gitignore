@@ -8,3 +8,4 @@
 *.zip
 /app/img/top-bg.jpg
 /app/img/logo1.svg
+/references/**
