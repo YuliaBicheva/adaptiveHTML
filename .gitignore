@@ -6,6 +6,5 @@
 /**/Thumbs.db
 /**/*.DS_Store
 *.zip
-/app/img/top-bg.jpg
-/app/img/logo1.svg
+/app/img/**
 /references/**

@@ -91,6 +91,17 @@ body
         background-color: darken($accent, 5%)
         &::after
             opacity: .32
+    &.button-white
+    	background-color: #fff 
+    	color: #444
+    	&::after
+    		background-color: rgba(#000, .6)
+    	&:hover
+    		&::after
+    			background-color: rgba(#000, .2)
+    	&:hover
+    		&::after
+    			background-color: rgba(#000, .4)
 
 
 .logo
@@ -282,7 +293,102 @@ html.mm-opened
 		color: #555
 	.phone-h
 		font-family: firasans, sans-serif
-		text-align: center		  
+		text-align: center		
+
+$colors: $blue, $red, $accent
+@for $i from 1 through length($colors)
+	.carousel-services .owl-item:nth-child(#{length($colors)}n+#{$i})
+		background-color: nth($colors, $i)
+
+.carousel-services
+	background-color: $dark
+	&-item
+		color: #fff
+		font-size: 18px
+		font-weight: 300
+		position: relative
+		display: flex
+		flex-direction: column-reverse
+		&:hover
+			.carousel-services-image
+				opacity: 1
+		.carousel-logo
+			text-align: center
+			img
+				width: 100px
+				height: auto
+				display: inline-block
+
+	.owl-item
+		&:nth-child(2n+2)
+			.carousel-services-item
+				flex-direction: column
+
+	&-image
+		background-size: cover
+		background-position: center
+		opacity: .7
+		transition: opacity .5s ease
+
+	&-content
+		// display: flex
+		position: relative
+		padding: 60px 10%
+
+	&-composition
+		margin: auto
+		text-align: center
+		width: 100%
+		.h3
+			text-transform: uppercase
+			font-weight: 800
+			font-size: 28px
+			margin-top: 5px
+			margin-bottom: 20px
+			span
+				font-transform: normal
+				font-size: 18px
+				font-weight: 300
+				display: block
+	&-list
+		margin: 0
+		padding: 0
+		list-style-type: none
+		margin-bottom: 25px
+		li
+			padding: 9px
+			border-bottom: 1px solid rgba(#000, .12)
+			&:last-child
+				border-bottom: none
+			strong
+				font-family: firasans, sans-serif
+				color: #4A4A4A
+			.fa
+				font-size: 14px
+				color: #4A4A4A
+
+.owl-nav
+	position: absolute
+	top: 0
+	width: 100%
+	> div
+		width: 64px
+		height: 64px
+		background-color: #fff
+		position: absolute
+		text-align: center
+		line-height: 64px
+		font-size: 26px
+		cursor: pointer
+		&.owl-prev
+			left: 0
+		&.owl-next
+			right: 0
+		
+
+.owl-carousel
+	.owl-item
+		backface-visibility: inherit
 
 
 @import "media" // Всегда в конце
