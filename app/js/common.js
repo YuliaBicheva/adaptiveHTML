@@ -65,7 +65,8 @@ $(function() {
 
 	$('select').selectize({
 		create: true,
-		sortField: 'text'
+		sortField: 'text',
+		
 	});
 
 	//E-mail Ajax Send
