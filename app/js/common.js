@@ -66,7 +66,16 @@ $(function() {
 	$('select').selectize({
 		create: true,
 		sortField: 'text',
-		
+
+	});
+
+	$('.reviews').owlCarousel({
+		loop: true,
+		items: 1,
+		smartSpeed: 700,
+		nav: false,
+		dots : true,
+		autoHeight: true
 	});
 
 	//E-mail Ajax Send
